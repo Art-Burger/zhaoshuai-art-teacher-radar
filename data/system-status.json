@@ -1,1 +1,15 @@
-{"first_build_date":"2026-09-09","last_data_update":"2026-09-09T19:36:00-04:00","last_automatic_update":null,"next_scheduled_update":"2026-09-10T09:00:00+08:00","update_status":"partial","status_label":"🟡 部分来源暂不可自动核实","cloud_runner":"GitHub Actions","timezone":"Asia/Shanghai","schedule":"每天 09:00","workflow_name":"Daily Job Radar Update","last_run_id":null,"last_run_url":null,"last_error":null}
+{
+  "first_build_date": "2026-09-09",
+  "last_data_update": "2026-09-10T07:59:26+08:00",
+  "last_automatic_update": "2026-09-10T07:59:26+08:00",
+  "next_scheduled_update": "2026-09-10T09:00:00+08:00",
+  "update_status": "partial",
+  "status_label": "🟡 部分来源暂不可自动核实",
+  "cloud_runner": "GitHub Actions",
+  "timezone": "Asia/Shanghai",
+  "schedule": "每天 09:00",
+  "workflow_name": "Daily Job Radar Update",
+  "last_run_id": null,
+  "last_run_url": null,
+  "last_error": null
+}
