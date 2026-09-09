@@ -4,7 +4,7 @@
 
 ## 网站入口
 
-GitHub Pages 部署完成后补充。
+https://art-burger.github.io/zhaoshuai-art-teacher-radar/
 
 ## 数据与更新
 
