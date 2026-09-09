@@ -1,1 +1,1 @@
-{"name":"zhaoshuai-art-teacher-radar","private":true,"scripts":{"test":"node scripts/validate.mjs"}}
+{"name":"zhaoshuai-art-teacher-radar","private":true,"scripts":{"test":"node scripts/validate.mjs","test:unit":"node tests/unit.mjs","test:all":"npm test && npm run test:unit"}}

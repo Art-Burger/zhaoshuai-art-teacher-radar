@@ -1,0 +1,81 @@
+name: Daily Job Radar Update
+
+on:
+  schedule:
+    # GitHub cron is UTC: 01:00 UTC = 09:00 Asia/Shanghai.
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: job-radar-daily-update
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout current data
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Back up last known-good data
+        run: cp -R data "$RUNNER_TEMP/data-backup"
+
+      - name: Run conservative cloud update
+        run: python scripts/update_jobs.py
+
+      - name: Validate before commit
+        run: npm test
+
+      - name: Run browser-independent tests
+        run: npm run test:unit
+
+      - name: Commit data changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/jobs.json data/schools.json data/search-log.json data/source-coverage.json data/system-status.json
+          if git diff --cached --quiet; then
+            echo "No data changes; nothing to commit."
+          else
+            update_date=$(TZ=Asia/Shanghai date +%F)
+            git commit -m "Update jobs - ${update_date}" \
+              -m "Automated public-source verification and search log update"
+            git push
+          fi
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload validated site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Confirm deployed page responds
+        run: |
+          for attempt in 1 2 3 4 5 6; do
+            if curl --fail --silent --show-error --max-time 20 "${{ steps.deployment.outputs.page_url }}data/jobs.json" >/dev/null; then
+              exit 0
+            fi
+            sleep 10
+          done
+          exit 1
