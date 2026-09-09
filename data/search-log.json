@@ -1,1 +1,122 @@
-[{"date":"2026-09-09","current_date_basis":"2026-09-09","regions":[{"region":"哈尔滨","sources_checked":12,"pages_found":17,"candidate_jobs":4,"open":0,"verify":1,"expired":2,"duplicates_merged":1,"failures":2,"new_jobs":3},{"region":"北京","sources_checked":14,"pages_found":18,"candidate_jobs":4,"open":0,"verify":2,"expired":1,"duplicates_merged":1,"failures":1,"new_jobs":2},{"region":"沈阳/大连/长春","sources_checked":13,"pages_found":19,"candidate_jobs":8,"open":0,"verify":4,"expired":3,"duplicates_merged":1,"failures":2,"new_jobs":5},{"region":"东北其他","sources_checked":5,"pages_found":7,"candidate_jobs":1,"open":0,"verify":0,"expired":1,"duplicates_merged":0,"failures":1,"new_jobs":0}],"queries":["美术教师","美术老师","小学/初中/高中美术教师","艺术教师","素描/色彩/速写/漫画/插画/数字绘画教师","艺考美术教师","Art Teacher","Visual Arts Teacher","IGCSE/A-Level/IB Visual Arts Teacher"],"totals":{"sources_checked":44,"pages_found":61,"candidate_jobs":17,"open":0,"verify":5,"expired":5,"duplicates_merged":3,"failures":6,"new_jobs":10},"failures":[{"site":"智联招聘","url":"https://www.zhaopin.com/jobdetail/CCL1491935650J40899114415.htm","failed_at":"2026-09-09","reason":"页面抓取内部错误，无法确认投递入口","retry":true},{"site":"eChinaCareers","url":"https://echinacareers.com/Jobs/ViewSingleJob?employerID=1521&jobID=26708","failed_at":"2026-09-09","reason":"访问超时","retry":true},{"site":"高校人才网职位汇总","url":"https://www.gaoxiaojob.com/hotword/tdqg937281","failed_at":"2026-09-09","reason":"详情页未展开，时效不明","retry":true},{"site":"BOSS直聘","url":"https://www.zhipin.com/","failed_at":"2026-09-09","reason":"登录/反爬限制","retry":true},{"site":"长春市清蒲中学转载页","url":"https://qgsydw.com/qgsydw/recruit/comrecruit/20260703/209912.html","failed_at":"2026-09-09","reason":"页面抓取失败，未确认是否含美术岗","retry":true},{"site":"微信公众号原文","url":null,"failed_at":"2026-09-09","reason":"原文不可稳定访问","retry":true}]}]
+[
+  {
+    "date": "2026-09-09",
+    "current_date_basis": "2026-09-09",
+    "regions": [
+      {
+        "region": "哈尔滨",
+        "sources_checked": 12,
+        "pages_found": 17,
+        "candidate_jobs": 4,
+        "open": 0,
+        "verify": 1,
+        "expired": 2,
+        "duplicates_merged": 1,
+        "failures": 2,
+        "new_jobs": 3
+      },
+      {
+        "region": "北京",
+        "sources_checked": 14,
+        "pages_found": 18,
+        "candidate_jobs": 4,
+        "open": 0,
+        "verify": 2,
+        "expired": 1,
+        "duplicates_merged": 1,
+        "failures": 1,
+        "new_jobs": 2
+      },
+      {
+        "region": "沈阳/大连/长春",
+        "sources_checked": 13,
+        "pages_found": 19,
+        "candidate_jobs": 8,
+        "open": 0,
+        "verify": 4,
+        "expired": 3,
+        "duplicates_merged": 1,
+        "failures": 2,
+        "new_jobs": 5
+      },
+      {
+        "region": "东北其他",
+        "sources_checked": 5,
+        "pages_found": 7,
+        "candidate_jobs": 1,
+        "open": 0,
+        "verify": 0,
+        "expired": 1,
+        "duplicates_merged": 0,
+        "failures": 1,
+        "new_jobs": 0
+      }
+    ],
+    "queries": [
+      "美术教师",
+      "美术老师",
+      "小学/初中/高中美术教师",
+      "艺术教师",
+      "素描/色彩/速写/漫画/插画/数字绘画教师",
+      "艺考美术教师",
+      "Art Teacher",
+      "Visual Arts Teacher",
+      "IGCSE/A-Level/IB Visual Arts Teacher"
+    ],
+    "totals": {
+      "sources_checked": 44,
+      "pages_found": 61,
+      "candidate_jobs": 17,
+      "open": 0,
+      "verify": 6,
+      "expired": 4,
+      "duplicates_merged": 3,
+      "failures": 6,
+      "new_jobs": 10
+    },
+    "failures": [
+      {
+        "site": "智联招聘",
+        "url": "https://www.zhaopin.com/jobdetail/CCL1491935650J40899114415.htm",
+        "failed_at": "2026-09-09",
+        "reason": "页面抓取内部错误，无法确认投递入口",
+        "retry": true
+      },
+      {
+        "site": "eChinaCareers",
+        "url": "https://echinacareers.com/Jobs/ViewSingleJob?employerID=1521&jobID=26708",
+        "failed_at": "2026-09-09",
+        "reason": "访问超时",
+        "retry": true
+      },
+      {
+        "site": "高校人才网职位汇总",
+        "url": "https://www.gaoxiaojob.com/hotword/tdqg937281",
+        "failed_at": "2026-09-09",
+        "reason": "详情页未展开，时效不明",
+        "retry": true
+      },
+      {
+        "site": "BOSS直聘",
+        "url": "https://www.zhipin.com/",
+        "failed_at": "2026-09-09",
+        "reason": "登录/反爬限制",
+        "retry": true
+      },
+      {
+        "site": "长春市清蒲中学转载页",
+        "url": "https://qgsydw.com/qgsydw/recruit/comrecruit/20260703/209912.html",
+        "failed_at": "2026-09-09",
+        "reason": "页面抓取失败，未确认是否含美术岗",
+        "retry": true
+      },
+      {
+        "site": "微信公众号原文",
+        "url": null,
+        "failed_at": "2026-09-09",
+        "reason": "原文不可稳定访问",
+        "retry": true
+      }
+    ]
+  }
+]
