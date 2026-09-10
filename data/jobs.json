@@ -34,8 +34,8 @@
     "official_url": null,
     "other_sources": [],
     "page_title": "北京市育英学校招聘公告",
-    "match_score": 72,
-    "match_level": "中等匹配",
+    "match_score": 77,
+    "match_level": "较高匹配",
     "match_reasons": [
       "美术学本科与岗位方向对应",
       "持有高中教师资格证",
@@ -46,7 +46,7 @@
       "未找到学校官网公告，时效待核实"
     ],
     "hard_blockers": [],
-    "recommendation_score": 58,
+    "recommendation_score": 45,
     "recommendation_level": "B",
     "recommendation_label": "🟡 B 可以考虑",
     "recommendation_reason": "刚发布且平台优秀，但学历条件与来源真实性仍需先确认。",
@@ -56,7 +56,8 @@
     "application_status": "未收藏",
     "user_notes": "",
     "created_at": "2026-09-09",
-    "updated_at": "2026-09-09"
+    "updated_at": "2026-09-09",
+    "scoring_version": "2026-09-cloud-v1"
   },
   {
     "id": "harbin-songbei-dongfang-art-2026",
@@ -93,8 +94,8 @@
     "official_url": null,
     "other_sources": [],
     "page_title": "美术教师招聘_哈尔滨市松北区东方文化艺术学校招聘",
-    "match_score": 84,
-    "match_level": "高匹配",
+    "match_score": 79,
+    "match_level": "较高匹配",
     "match_reasons": [
       "哈尔滨最高优先地区",
       "素描、速写、色彩技能直接对应",
@@ -105,9 +106,9 @@
       "薪资未注明"
     ],
     "hard_blockers": [],
-    "recommendation_score": 69,
-    "recommendation_level": "A",
-    "recommendation_label": "🟢 A 值得投",
+    "recommendation_score": 50,
+    "recommendation_level": "B",
+    "recommendation_label": "🟡 B 可以考虑",
     "recommendation_reason": "地域与专业技能高度吻合；先确认平台投递入口仍有效。",
     "is_new_72h": false,
     "deadline_urgency": "未注明",
@@ -115,7 +116,8 @@
     "application_status": "未收藏",
     "user_notes": "",
     "created_at": "2026-09-09",
-    "updated_at": "2026-09-09"
+    "updated_at": "2026-09-09",
+    "scoring_version": "2026-09-cloud-v1"
   },
   {
     "id": "beijing-international-art-echinacareers-26708",
@@ -152,8 +154,8 @@
     "official_url": null,
     "other_sources": [],
     "page_title": "Art Teacher",
-    "match_score": 63,
-    "match_level": "中等匹配",
+    "match_score": 83,
+    "match_level": "高匹配",
     "match_reasons": [
       "商业插画与数字绘画能力有优势",
       "具有跨年龄段教学经验"
@@ -164,9 +166,9 @@
       "学校名称未披露"
     ],
     "hard_blockers": [],
-    "recommendation_score": 43,
-    "recommendation_level": "C",
-    "recommendation_label": "⚪ C 低优先级",
+    "recommendation_score": 49,
+    "recommendation_level": "B",
+    "recommendation_label": "🟡 B 可以考虑",
     "recommendation_reason": "方向相符，但关键信息不足且页面访问失败，暂不优先。",
     "is_new_72h": false,
     "deadline_urgency": "未注明",
@@ -174,7 +176,8 @@
     "application_status": "未收藏",
     "user_notes": "",
     "created_at": "2026-09-09",
-    "updated_at": "2026-09-09"
+    "updated_at": "2026-09-09",
+    "scoring_version": "2026-09-cloud-v1"
   },
   {
     "id": "dalian-wengu-high-art-2026",
@@ -211,7 +214,7 @@
     "official_url": null,
     "other_sources": [],
     "page_title": "大连美术教师招聘_2026年招聘信息汇总",
-    "match_score": 75,
+    "match_score": 74,
     "match_level": "较高匹配",
     "match_reasons": [
       "本科满足页面学历要求",
@@ -223,9 +226,9 @@
       "聚合页未给出明确发布时间与截止日"
     ],
     "hard_blockers": [],
-    "recommendation_score": 52,
-    "recommendation_level": "B",
-    "recommendation_label": "🟡 B 可以考虑",
+    "recommendation_score": 43,
+    "recommendation_level": "C",
+    "recommendation_label": "⚪ C 低优先级",
     "recommendation_reason": "学科方向合适，但时效与高中教学经历要求均待核实。",
     "is_new_72h": false,
     "deadline_urgency": "未注明",
@@ -233,7 +236,8 @@
     "application_status": "未收藏",
     "user_notes": "",
     "created_at": "2026-09-09",
-    "updated_at": "2026-09-09"
+    "updated_at": "2026-09-09",
+    "scoring_version": "2026-09-cloud-v1"
   },
   {
     "id": "shenyang-yizhong-art-2026-03",
@@ -272,7 +276,7 @@
       "https://www.zhipin.com/job_detail/8c18c7b7683cc92603182du-GVtY.html?ka=company_more_job_8c18c7b7683cc92603182du-GVtY"
     ],
     "page_title": "招聘信息：沈阳翼众东北美术学校",
-    "match_score": 88,
+    "match_score": 81,
     "match_level": "高匹配",
     "match_reasons": [
       "美术学本科直接对应",
@@ -284,9 +288,9 @@
       "普通话资格信息待本人确认"
     ],
     "hard_blockers": [],
-    "recommendation_score": 70,
-    "recommendation_level": "A",
-    "recommendation_label": "🟢 A 值得投",
+    "recommendation_score": 48,
+    "recommendation_level": "B",
+    "recommendation_label": "🟡 B 可以考虑",
     "recommendation_reason": "薪资与能力匹配突出；确认 BOSS 职位有效后值得优先投。",
     "is_new_72h": false,
     "deadline_urgency": "未注明",
@@ -294,7 +298,8 @@
     "application_status": "未收藏",
     "user_notes": "",
     "created_at": "2026-09-09",
-    "updated_at": "2026-09-09"
+    "updated_at": "2026-09-09",
+    "scoring_version": "2026-09-cloud-v1"
   },
   {
     "id": "changchun-keji-art-faculty-2026",
@@ -331,8 +336,8 @@
     "official_url": "https://www.cstu.edu.cn/rsc/info/1151/4862.htm",
     "other_sources": [],
     "page_title": "长春科技学院2026年招聘公告",
-    "match_score": 50,
-    "match_level": "低匹配",
+    "match_score": 67,
+    "match_level": "中等匹配",
     "match_reasons": [
       "本科专业方向对应"
     ],
@@ -351,7 +356,8 @@
     "application_status": "未收藏",
     "user_notes": "",
     "created_at": "2026-09-09",
-    "updated_at": "2026-09-09"
+    "updated_at": "2026-09-09",
+    "scoring_version": "2026-09-cloud-v1"
   },
   {
     "id": "harbin-shifan-affiliated-practice-2026-08",
@@ -388,8 +394,8 @@
     "official_url": null,
     "other_sources": [],
     "page_title": "哈尔滨市师范附属小学校2026年临聘教师招聘公告（补招录）",
-    "match_score": 94,
-    "match_level": "高匹配",
+    "match_score": 78,
+    "match_level": "较高匹配",
     "match_reasons": [
       "哈尔滨南岗最高优先地区",
       "学历专业及教师资格匹配",
@@ -403,7 +409,7 @@
     ],
     "recommendation_score": 0,
     "recommendation_level": "X",
-    "recommendation_label": "🔴 X 已过期",
+    "recommendation_label": "🔴 X 存在硬伤",
     "recommendation_reason": "匹配很高但报名已截止，保留用于学校招聘规律观察。",
     "is_new_72h": false,
     "deadline_urgency": "已截止",
@@ -411,7 +417,8 @@
     "application_status": "未收藏",
     "user_notes": "",
     "created_at": "2026-09-09",
-    "updated_at": "2026-09-09"
+    "updated_at": "2026-09-09",
+    "scoring_version": "2026-09-cloud-v1"
   },
   {
     "id": "harbin-qiushi-junior-art-2026-07",
@@ -448,8 +455,8 @@
     "official_url": null,
     "other_sources": [],
     "page_title": "初中部美术教师招聘_哈尔滨市秋实学校",
-    "match_score": 90,
-    "match_level": "高匹配",
+    "match_score": 69,
+    "match_level": "中等匹配",
     "match_reasons": [
       "哈尔滨优先地区",
       "本科与初中美术经历匹配",
@@ -461,7 +468,7 @@
     ],
     "recommendation_score": 0,
     "recommendation_level": "X",
-    "recommendation_label": "🔴 X 已过期",
+    "recommendation_label": "🔴 X 存在硬伤",
     "recommendation_reason": "能力与地区匹配高，但已明确截止。",
     "is_new_72h": false,
     "deadline_urgency": "已截止",
@@ -469,7 +476,8 @@
     "application_status": "未收藏",
     "user_notes": "",
     "created_at": "2026-09-09",
-    "updated_at": "2026-09-09"
+    "updated_at": "2026-09-09",
+    "scoring_version": "2026-09-cloud-v1"
   },
   {
     "id": "shenyang-art-preschool-normal-2026",
@@ -506,8 +514,8 @@
     "official_url": null,
     "other_sources": [],
     "page_title": "沈阳市面向国内部分高校2026年应届毕业生招聘教师",
-    "match_score": 47,
-    "match_level": "低匹配",
+    "match_score": 67,
+    "match_level": "中等匹配",
     "match_reasons": [
       "美术能力方向相关"
     ],
@@ -527,7 +535,8 @@
     "application_status": "未收藏",
     "user_notes": "",
     "created_at": "2026-09-09",
-    "updated_at": "2026-09-09"
+    "updated_at": "2026-09-09",
+    "scoring_version": "2026-09-cloud-v1"
   },
   {
     "id": "shenyang-lumei-affiliated-2026",
@@ -564,8 +573,8 @@
     "official_url": "https://www.lnlmfz.com/newsshow.php?cid=44&id=374",
     "other_sources": [],
     "page_title": "2026年鲁迅美术学院附属中等美术学校招聘公告",
-    "match_score": 76,
-    "match_level": "较高匹配",
+    "match_score": 80,
+    "match_level": "高匹配",
     "match_reasons": [
       "高中教师资格证与美术专业背景对应",
       "传统绘画能力适配艺术高中"
@@ -578,7 +587,7 @@
     ],
     "recommendation_score": 0,
     "recommendation_level": "X",
-    "recommendation_label": "🔴 X 已过期",
+    "recommendation_label": "🔴 X 存在硬伤",
     "recommendation_reason": "学校平台高度相关，但本轮已截止，列入重点 Watchlist。",
     "is_new_72h": false,
     "deadline_urgency": "已截止",
@@ -586,6 +595,7 @@
     "application_status": "未收藏",
     "user_notes": "",
     "created_at": "2026-09-09",
-    "updated_at": "2026-09-09"
+    "updated_at": "2026-09-09",
+    "scoring_version": "2026-09-cloud-v1"
   }
 ]

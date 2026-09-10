@@ -172,5 +172,32 @@
       "猎聘",
       "万行教师人才网"
     ]
+  },
+  {
+    "date": "2026-09-10",
+    "run_type": "github_actions_cloud_update",
+    "run_at": "2026-09-10T08:03:47+08:00",
+    "queries": [
+      "公开教育局/人社局/学校招聘索引",
+      "Bing News RSS：美术教师与 Art Teacher 城市组合"
+    ],
+    "totals": {
+      "sources_checked": 5,
+      "pages_found": 0,
+      "candidate_jobs": 0,
+      "open": 0,
+      "verify": 6,
+      "expired": 4,
+      "duplicates_merged": 0,
+      "failures": 0,
+      "new_jobs": 0
+    },
+    "failures": [],
+    "source_unavailable_for_cloud_automation": [
+      "BOSS直聘",
+      "智联招聘",
+      "猎聘",
+      "万行教师人才网"
+    ]
   }
 ]
