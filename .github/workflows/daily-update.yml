@@ -32,6 +32,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install public-document parsers
+        run: pip install --disable-pip-version-check pypdf openpyxl xlrd
+
       - name: Back up last known-good data
         run: cp -R data "$RUNNER_TEMP/data-backup"
 

@@ -5,10 +5,12 @@
     "source_type": "招聘平台",
     "url": "https://www.zhipin.com/",
     "automation_level": "C",
-    "last_checked": "2026-09-10T08:31:16+08:00",
-    "last_success": true,
+    "last_checked": "2026-09-10T09:02:30+08:00",
+    "last_success": false,
     "jobs_discovered": 0,
-    "manual_required": true
+    "manual_required": true,
+    "adapter": "public_search_index_only_manual_detail",
+    "source_unavailable_for_cloud_automation": true
   },
   {
     "id": "recruit-02",
@@ -16,10 +18,12 @@
     "source_type": "招聘平台",
     "url": "https://www.zhaopin.com/",
     "automation_level": "C",
-    "last_checked": "2026-09-10T08:31:16+08:00",
-    "last_success": true,
+    "last_checked": "2026-09-10T09:02:30+08:00",
+    "last_success": false,
     "jobs_discovered": 0,
-    "manual_required": true
+    "manual_required": true,
+    "adapter": "public_search_index_only_manual_detail",
+    "source_unavailable_for_cloud_automation": true
   },
   {
     "id": "recruit-03",
@@ -27,10 +31,12 @@
     "source_type": "招聘平台",
     "url": "https://www.liepin.com/",
     "automation_level": "C",
-    "last_checked": "2026-09-10T08:31:16+08:00",
-    "last_success": true,
+    "last_checked": "2026-09-10T09:02:30+08:00",
+    "last_success": false,
     "jobs_discovered": 0,
-    "manual_required": true
+    "manual_required": true,
+    "adapter": "public_search_index_only_manual_detail",
+    "source_unavailable_for_cloud_automation": true
   },
   {
     "id": "recruit-04",
@@ -38,10 +44,12 @@
     "source_type": "教师招聘",
     "url": "https://www.job10000.com/",
     "automation_level": "C",
-    "last_checked": "2026-09-10T08:31:16+08:00",
-    "last_success": true,
+    "last_checked": "2026-09-10T09:02:30+08:00",
+    "last_success": false,
     "jobs_discovered": 0,
-    "manual_required": true
+    "manual_required": true,
+    "adapter": "public_search_index_only_manual_detail",
+    "source_unavailable_for_cloud_automation": true
   },
   {
     "id": "recruit-05",
@@ -49,10 +57,11 @@
     "source_type": "教师招聘/聚合",
     "url": "https://www.gaoxiaojob.com/",
     "automation_level": "B",
-    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_checked": "2026-09-10T09:02:30+08:00",
     "last_success": true,
     "jobs_discovered": 0,
-    "manual_required": false
+    "manual_required": false,
+    "adapter": "public_index_fetch_and_site_query"
   },
   {
     "id": "recruit-06",
@@ -60,10 +69,11 @@
     "source_type": "教师招聘/聚合",
     "url": "https://www.job910.com/",
     "automation_level": "B",
-    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_checked": "2026-09-10T09:02:30+08:00",
     "last_success": true,
     "jobs_discovered": 0,
-    "manual_required": false
+    "manual_required": false,
+    "adapter": "public_index_fetch_and_site_query"
   },
   {
     "id": "recruit-07",
@@ -71,10 +81,11 @@
     "source_type": "事业单位聚合",
     "url": "https://www.fenbi.com/",
     "automation_level": "B",
-    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_checked": "2026-09-10T09:02:30+08:00",
     "last_success": true,
     "jobs_discovered": 0,
-    "manual_required": false
+    "manual_required": false,
+    "adapter": "public_index_fetch_and_site_query"
   },
   {
     "id": "recruit-08",
@@ -82,10 +93,11 @@
     "source_type": "事业单位聚合",
     "url": "https://qgsydw.com/",
     "automation_level": "B",
-    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_checked": "2026-09-10T09:02:30+08:00",
     "last_success": false,
     "jobs_discovered": 0,
-    "manual_required": false
+    "manual_required": false,
+    "adapter": "public_index_fetch_and_site_query"
   },
   {
     "id": "recruit-09",
@@ -93,10 +105,11 @@
     "source_type": "国际学校招聘",
     "url": "https://careers.nordangliaeducation.com/",
     "automation_level": "B",
-    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_checked": "2026-09-10T09:02:30+08:00",
     "last_success": true,
     "jobs_discovered": 0,
-    "manual_required": false
+    "manual_required": false,
+    "adapter": "public_careers_index_and_site_query"
   },
   {
     "id": "recruit-10",
@@ -104,10 +117,11 @@
     "source_type": "国际招聘平台",
     "url": "https://echinacareers.com/",
     "automation_level": "B",
-    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_checked": "2026-09-10T09:02:30+08:00",
     "last_success": true,
     "jobs_discovered": 0,
-    "manual_required": false
+    "manual_required": false,
+    "adapter": "public_careers_index_and_site_query"
   },
   {
     "id": "recruit-11",
@@ -115,10 +129,11 @@
     "source_type": "高校就业",
     "url": "https://www.ncss.cn/",
     "automation_level": "B",
-    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_checked": "2026-09-10T09:02:30+08:00",
     "last_success": true,
     "jobs_discovered": 0,
-    "manual_required": false
+    "manual_required": false,
+    "adapter": "public_index_fetch_and_site_query"
   },
   {
     "id": "recruit-12",
@@ -126,9 +141,10 @@
     "source_type": "公开搜索",
     "url": "https://www.bing.com/news/search",
     "automation_level": "B",
-    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_checked": "2026-09-10T09:02:30+08:00",
     "last_success": true,
     "jobs_discovered": 0,
-    "manual_required": false
+    "manual_required": false,
+    "adapter": "news_rss_supplement"
   }
 ]

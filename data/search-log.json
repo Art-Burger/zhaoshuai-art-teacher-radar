@@ -631,82 +631,152 @@
     "notes": "Additive-first V2 rotation; public leads remain leads until verified."
   },
   {
-    "run_id": "cloud-20260910T090821+0800",
-    "timestamp": "2026-09-10T09:08:21+08:00",
-    "run_type": "cloud_daily_radar",
+    "run_id": "cloud-v3-20260910T090230+0800",
+    "timestamp": "2026-09-10T09:02:30+08:00",
+    "run_type": "cloud_daily_radar_v3",
     "city": [
       "哈尔滨"
     ],
-    "known_sources_checked": 11,
-    "schools_checked": 4,
-    "discovery_queries_executed": 6,
-    "queries_executed": [
-      "哈尔滨 美术教师 最新招聘 2026",
-      "哈尔滨 艺术教师 学校招聘 2026年9月",
-      "哈尔滨市继红小学校 美术教师 招聘 2026",
-      "哈尔滨市花园小学校 美术教师 招聘 2026",
-      "哈尔滨市师范附属小学校 美术教师 招聘 2026",
-      "哈尔滨市铁岭小学校 美术教师 招聘 2026"
-    ],
-    "urls_examined": 17,
-    "new_sources_found": 0,
-    "new_job_leads": 0,
-    "new_verified_jobs": 0,
-    "jobs_reverified": 0,
+    "registered_schools": 60,
+    "schools_actually_checked": 20,
+    "schools_checked_last_7_days": 20,
+    "registered_sources": 23,
+    "sources_actually_fetched": 8,
+    "queries_actually_sent": 44,
+    "result_pages_received": 44,
+    "result_urls_examined": 254,
+    "job_pages_opened": 0,
+    "job_leads_created": 0,
+    "new_job_lead_urls": [],
+    "jobs_verified_open": 0,
     "jobs_expired": 0,
     "duplicates_merged": 0,
     "failed_sources": [
       {
         "source_name": "哈尔滨市政府信息",
         "url": "https://www.harbin.gov.cn/",
-        "reason": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+        "stage": "source",
+        "reason": "URLError: <urlopen error timed out>"
       },
       {
         "source_name": "哈尔滨市政务服务网",
         "url": "https://zwfw.harbin.gov.cn/",
-        "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+        "stage": "source",
+        "reason": "URLError: <urlopen error [Errno 61] Connection refused>"
       },
       {
         "source_name": "南岗区教育局政务入口",
         "url": "https://zwfw.harbin.gov.cn/hz_root/bstype/grall?vmcityout=ngq",
-        "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+        "stage": "source",
+        "reason": "URLError: <urlopen error [Errno 61] Connection refused>"
       },
       {
         "source_name": "道里区政府",
         "url": "https://www.hrbdl.gov.cn/",
-        "reason": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+        "stage": "source",
+        "reason": "URLError: <urlopen error timed out>"
       },
       {
         "source_name": "道外区政府",
         "url": "https://www.hrbdw.gov.cn/",
-        "reason": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+        "stage": "source",
+        "reason": "URLError: <urlopen error timed out>"
       },
       {
         "source_name": "香坊区政务服务网",
         "url": "https://zwfw.harbin.gov.cn/hz_root/map/minglu?vmcityout=xfq",
-        "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+        "stage": "source",
+        "reason": "URLError: <urlopen error [Errno 61] Connection refused>"
       },
       {
         "source_name": "松北区政府/哈尔滨新区",
         "url": "https://www.songbei.gov.cn/",
-        "reason": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+        "stage": "source",
+        "reason": "URLError: <urlopen error timed out>"
       },
       {
         "source_name": "平房区政府",
         "url": "https://www.hrbpf.gov.cn/",
-        "reason": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+        "stage": "source",
+        "reason": "URLError: <urlopen error timed out>"
       },
       {
         "source_name": "呼兰区政务服务网",
         "url": "https://zwfw.harbin.gov.cn/hz_root/oneQY/bsbqr?vmcityout=hlq",
-        "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+        "stage": "source",
+        "reason": "URLError: <urlopen error [Errno 61] Connection refused>"
       },
       {
         "source_name": "黑龙江省事业单位公开招聘平台",
         "url": "https://hlj.zhaopin.com/",
+        "stage": "source",
         "reason": "HTTPError: HTTP Error 403: Forbidden"
+      },
+      {
+        "source_name": "全国事业单位招聘网",
+        "url": "https://qgsydw.com/",
+        "stage": "source",
+        "reason": "HTTPError: HTTP Error 418: "
       }
     ],
-    "notes": "Additive-first V2 rotation; public leads remain leads until verified."
+    "channels": {
+      "ordinary_web_search": "primary",
+      "news_rss": "supplement",
+      "school_reverse_search": true,
+      "official_body_and_attachments": true,
+      "recruitment_public_index": true
+    },
+    "notes": "Counters represent completed requests only; registry size is never counted as fetched coverage."
+  },
+  {
+    "run_id": "openclaw-deep-v3-20260910",
+    "timestamp": "2026-09-10T09:10:00+08:00",
+    "run_type": "openclaw_deep_search_v3",
+    "city": [
+      "哈尔滨"
+    ],
+    "registered_schools": 60,
+    "schools_actually_checked": 20,
+    "schools_checked_last_7_days": 20,
+    "registered_sources": 23,
+    "sources_actually_fetched": 8,
+    "queries_actually_sent": 12,
+    "result_pages_received": 12,
+    "result_urls_examined": 35,
+    "job_pages_attempted": 19,
+    "job_pages_opened": 13,
+    "job_leads_created": 4,
+    "new_job_lead_urls": [
+      "https://m.zhipin.com/companys/a342e52ae528b38803B50tm7GFY~.html",
+      "https://www.zhaopin.com/jobdetail/CCL1501332240J40966289104.htm",
+      "https://www.zhaopin.com/jobdetail/CCL1358282220J40818902610.htm",
+      "https://www.zhaopin.com/jobdetail/CC218608720J40422521516.htm"
+    ],
+    "jobs_verified_open": 2,
+    "queries_executed": [
+      "哈尔滨 美术教师 招聘 2026 学校",
+      "哈尔滨 小学美术教师 招聘 2026",
+      "哈尔滨 初中美术教师 招聘 2026",
+      "哈尔滨 高中美术教师 招聘 2026",
+      "哈尔滨 艺术教师 学校招聘 2026年9月",
+      "哈尔滨 美术教师 教育局 公开招聘 2026",
+      "哈尔滨 美术教师 人社局 事业单位 2026",
+      "哈尔滨 民办学校 美术教师 招聘 2026",
+      "site:zhipin.com 哈尔滨 美术教师 招聘",
+      "site:zhaopin.com 哈尔滨 美术教师 招聘",
+      "site:liepin.com 哈尔滨 美术教师 招聘",
+      "site:job10000.com 哈尔滨 美术教师 招聘"
+    ],
+    "failed_sources": [
+      {
+        "url": "https://m.zhipin.com/gongsi/job/163e78d976a510221HB53t29F1Q~.html",
+        "reason": "BOSS security/login wall"
+      },
+      {
+        "url": "https://www.zhaopin.com/jobdetail/CCL1358282220J40220107010.htm",
+        "reason": "detail timeout"
+      }
+    ],
+    "notes": "Executed with OpenClaw Web Search and page opening, independently of the cloud script."
   }
 ]

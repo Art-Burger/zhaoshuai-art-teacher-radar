@@ -1,0 +1,52 @@
+{
+  "run_id": "openclaw-deep-v3-20260910",
+  "timestamp": "2026-09-10T09:10:00+08:00",
+  "queries_actually_sent": 12,
+  "result_pages_received": 12,
+  "result_urls_examined": 35,
+  "job_pages_attempted": 19,
+  "job_pages_opened": 13,
+  "queries": [
+    "哈尔滨 美术教师 招聘 2026 学校",
+    "哈尔滨 小学美术教师 招聘 2026",
+    "哈尔滨 初中美术教师 招聘 2026",
+    "哈尔滨 高中美术教师 招聘 2026",
+    "哈尔滨 艺术教师 学校招聘 2026年9月",
+    "哈尔滨 美术教师 教育局 公开招聘 2026",
+    "哈尔滨 美术教师 人社局 事业单位 2026",
+    "哈尔滨 民办学校 美术教师 招聘 2026",
+    "site:zhipin.com 哈尔滨 美术教师 招聘",
+    "site:zhaopin.com 哈尔滨 美术教师 招聘",
+    "site:liepin.com 哈尔滨 美术教师 招聘",
+    "site:job10000.com 哈尔滨 美术教师 招聘"
+  ],
+  "opened_urls": [
+    "https://www.fenbi.com/page/fenxiaozhaokaodetail/12/1329/468305915172864",
+    "https://m.huatu.com/jiaoshi/2026/0818/2870822.html",
+    "https://rencaizhaopin.hrbeduy.com/",
+    "https://m.zhipin.com/companys/a342e52ae528b38803B50tm7GFY~.html",
+    "https://www.zhaopin.com/zhaopin/dad04725850a499b80aae05786c1f983/",
+    "https://www.zhaopin.com/zhaopin/baf6fd18e7b749618bc7e264726de83a/",
+    "https://www.zhaopin.com/jobdetail/CCL1491935650J40899114415.htm",
+    "https://www.zhaopin.com/jobdetail/CCL1501332240J40966289104.htm",
+    "https://www.zhaopin.com/jobdetail/CCL1358282220J40818902610.htm",
+    "https://www.zhaopin.com/jobdetail/CC218608720J40422521516.htm",
+    "https://www.gaoxiaojob.com/job/detail/2277710.html",
+    "https://www.gaoxiaojob.com/job/detail/2277699.html",
+    "https://bjhfrlzy.cn/"
+  ],
+  "failed_or_blocked_urls": [
+    {"url": "https://m.zhipin.com/gongsi/job/163e78d976a510221HB53t29F1Q~.html", "reason": "BOSS security/login wall"},
+    {"url": "https://www.zhaopin.com/jobdetail/CCL1358282220J40220107010.htm", "reason": "detail timeout"}
+  ],
+  "lead_urls": [
+    "https://m.zhipin.com/companys/a342e52ae528b38803B50tm7GFY~.html",
+    "https://www.zhaopin.com/jobdetail/CCL1501332240J40966289104.htm",
+    "https://www.zhaopin.com/jobdetail/CCL1358282220J40818902610.htm",
+    "https://www.zhaopin.com/jobdetail/CC218608720J40422521516.htm"
+  ],
+  "verified_open_urls": [
+    "https://www.zhaopin.com/jobdetail/CCL1491935650J40899114415.htm",
+    "https://www.zhaopin.com/jobdetail/CCL1358282220J40818902610.htm"
+  ]
+}
