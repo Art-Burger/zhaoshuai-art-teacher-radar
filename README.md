@@ -20,6 +20,16 @@ https://art-burger.github.io/zhaoshuai-art-teacher-radar/
 
 最后更新：2026-09-09
 
+## Search Engine V2
+
+雷达采用四层注册表：`harbin-schools.json`、`city-schools.json`、`official-sources.json`、`recruitment-sources.json`，再由 `jobs.json` 保存岗位。哈尔滨首批监测 60 所真实学校/艺术教育机构，北京 12 所，沈阳、大连、长春各 8 所。
+
+每日云端任务执行哈尔滨基础监测，并按星期轮换 K12、国际/民办、逐校反向搜索、艺考/漫画/插画专项和全库验证。日志分别记录已知源检查、Discovery Query、检查 URL、新来源、招聘线索、重新验证、过期、去重和失败来源。
+
+岗位采用四级状态：已验证可投、高可信待核实、新发现招聘线索、历史/已过期。搜索摘要可以产生招聘线索，但不会直接升级成当前可投。页面将履历 Match Score、信息可信度和招聘状态分开显示。
+
+`scripts/deep_search_import.py` 是 OpenClaw Deep Search 的可审计导入流程；它扩充未知来源和学校，并将公开索引线索保守合并回同一数据库。
+
 ## 云端自动更新
 
 `Daily Job Radar Update` 位于 `.github/workflows/daily-update.yml`，每天 `01:00 UTC`（北京时间 09:00）运行，也支持在 GitHub Actions 页面手动运行。任务由 GitHub 托管 runner 执行，不依赖个人电脑开机。它先备份数据，再运行保守型公开来源搜索、验证、去重、日期检查和测试；只有通过测试的数据才提交并部署到 Pages。

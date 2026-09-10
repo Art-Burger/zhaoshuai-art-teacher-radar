@@ -57,7 +57,8 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1"
+    "scoring_version": "2026-09-cloud-v1",
+    "information_confidence": "低"
   },
   {
     "id": "harbin-songbei-dongfang-art-2026",
@@ -87,7 +88,7 @@
     "deadline": null,
     "first_seen_date": "2026-09-09",
     "last_verified_date": "2026-09-09",
-    "job_status": "verify",
+    "job_status": "lead",
     "source_level": "B",
     "source_name": "智联招聘",
     "source_url": "https://www.zhaopin.com/jobdetail/CCL1491935650J40899114415.htm",
@@ -103,12 +104,13 @@
     ],
     "risk_flags": [
       "平台页面抓取失败，投递入口与发布日期待人工复核",
-      "薪资未注明"
+      "薪资未注明",
+      "详情或当前投递入口无法确认，降级为招聘线索"
     ],
     "hard_blockers": [],
-    "recommendation_score": 50,
+    "recommendation_score": 25,
     "recommendation_level": "B",
-    "recommendation_label": "🟡 B 可以考虑",
+    "recommendation_label": "🔎 新发现招聘线索",
     "recommendation_reason": "地域与专业技能高度吻合；先确认平台投递入口仍有效。",
     "is_new_72h": false,
     "deadline_urgency": "未注明",
@@ -117,7 +119,8 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1"
+    "scoring_version": "2026-09-cloud-v1",
+    "information_confidence": "低"
   },
   {
     "id": "beijing-international-art-echinacareers-26708",
@@ -147,7 +150,7 @@
     "deadline": null,
     "first_seen_date": "2026-09-09",
     "last_verified_date": "2026-09-09",
-    "job_status": "verify",
+    "job_status": "lead",
     "source_level": "C",
     "source_name": "eChinaCareers",
     "source_url": "https://echinacareers.com/Jobs/ViewSingleJob?employerID=1521&jobID=26708&location=Beijing%28--%29%2C&title=Art-Teacher",
@@ -163,12 +166,13 @@
     "risk_flags": [
       "页面访问超时",
       "英语授课能力待确认",
-      "学校名称未披露"
+      "学校名称未披露",
+      "详情或当前投递入口无法确认，降级为招聘线索"
     ],
     "hard_blockers": [],
-    "recommendation_score": 49,
+    "recommendation_score": 25,
     "recommendation_level": "B",
-    "recommendation_label": "🟡 B 可以考虑",
+    "recommendation_label": "🔎 新发现招聘线索",
     "recommendation_reason": "方向相符，但关键信息不足且页面访问失败，暂不优先。",
     "is_new_72h": false,
     "deadline_urgency": "未注明",
@@ -177,7 +181,8 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1"
+    "scoring_version": "2026-09-cloud-v1",
+    "information_confidence": "低"
   },
   {
     "id": "dalian-wengu-high-art-2026",
@@ -207,7 +212,7 @@
     "deadline": null,
     "first_seen_date": "2026-09-09",
     "last_verified_date": "2026-09-09",
-    "job_status": "verify",
+    "job_status": "lead",
     "source_level": "C",
     "source_name": "高校人才网职位汇总",
     "source_url": "https://www.gaoxiaojob.com/hotword/tdqg937281",
@@ -223,12 +228,13 @@
     ],
     "risk_flags": [
       "无高中任教经历",
-      "聚合页未给出明确发布时间与截止日"
+      "聚合页未给出明确发布时间与截止日",
+      "详情或当前投递入口无法确认，降级为招聘线索"
     ],
     "hard_blockers": [],
-    "recommendation_score": 43,
+    "recommendation_score": 25,
     "recommendation_level": "C",
-    "recommendation_label": "⚪ C 低优先级",
+    "recommendation_label": "🔎 新发现招聘线索",
     "recommendation_reason": "学科方向合适，但时效与高中教学经历要求均待核实。",
     "is_new_72h": false,
     "deadline_urgency": "未注明",
@@ -237,7 +243,8 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1"
+    "scoring_version": "2026-09-cloud-v1",
+    "information_confidence": "低"
   },
   {
     "id": "shenyang-yizhong-art-2026-03",
@@ -299,7 +306,8 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1"
+    "scoring_version": "2026-09-cloud-v1",
+    "information_confidence": "低"
   },
   {
     "id": "changchun-keji-art-faculty-2026",
@@ -357,7 +365,8 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1"
+    "scoring_version": "2026-09-cloud-v1",
+    "information_confidence": "高"
   },
   {
     "id": "harbin-shifan-affiliated-practice-2026-08",
@@ -418,7 +427,8 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1"
+    "scoring_version": "2026-09-cloud-v1",
+    "information_confidence": "高"
   },
   {
     "id": "harbin-qiushi-junior-art-2026-07",
@@ -477,7 +487,8 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1"
+    "scoring_version": "2026-09-cloud-v1",
+    "information_confidence": "高"
   },
   {
     "id": "shenyang-art-preschool-normal-2026",
@@ -536,7 +547,8 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1"
+    "scoring_version": "2026-09-cloud-v1",
+    "information_confidence": "低"
   },
   {
     "id": "shenyang-lumei-affiliated-2026",
@@ -596,6 +608,123 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1"
+    "scoring_version": "2026-09-cloud-v1",
+    "information_confidence": "高"
+  },
+  {
+    "id": "deep-dce53f198d82bdf5",
+    "school_name": "哈尔滨市松雷中学校",
+    "job_title": "高中美术教师",
+    "province": null,
+    "city": "哈尔滨",
+    "district": null,
+    "school_type": "民办完全中学",
+    "education_stage": "未注明",
+    "job_category": "美术教师",
+    "salary_min": null,
+    "salary_max": null,
+    "salary_unit": null,
+    "salary_raw_text": "5–8K/月",
+    "education_requirement": null,
+    "major_requirement": null,
+    "teacher_certificate_requirement": null,
+    "mandarin_requirement": null,
+    "experience_requirement": null,
+    "age_requirement": null,
+    "hukou_requirement": null,
+    "english_required": null,
+    "english_requirement": null,
+    "international_curriculum_requirement": null,
+    "published_date": null,
+    "deadline": null,
+    "first_seen_date": "2026-09-10",
+    "last_verified_date": "2026-09-10",
+    "job_status": "lead",
+    "source_level": "C",
+    "source_name": "教师招聘网 job910",
+    "source_url": "https://nangangqu.job910.com/",
+    "official_url": null,
+    "other_sources": [],
+    "page_title": "高中美术教师",
+    "match_score": 75,
+    "match_level": "较高匹配",
+    "match_reasons": [
+      "美术教学方向与候选人技能相关"
+    ],
+    "risk_flags": [
+      "公开索引已发现，但发布时间和当前投递状态未确认"
+    ],
+    "hard_blockers": [],
+    "recommendation_score": 25,
+    "recommendation_level": "C",
+    "recommendation_label": "🔎 新发现招聘线索",
+    "recommendation_reason": "等待公开详情页或人工浏览器进一步核实。",
+    "information_confidence": "低",
+    "is_new_72h": false,
+    "deadline_urgency": "未注明",
+    "user_favorite": false,
+    "application_status": "未收藏",
+    "user_notes": "",
+    "created_at": "2026-09-10",
+    "updated_at": "2026-09-10",
+    "scoring_version": "2026-09-cloud-v2"
+  },
+  {
+    "id": "deep-22b356c5bc497164",
+    "school_name": "长春市柏辰艺术中学",
+    "job_title": "峰合画室美术教师（可接受外派）",
+    "province": null,
+    "city": "长春",
+    "district": null,
+    "school_type": "民办艺术高中",
+    "education_stage": "未注明",
+    "job_category": "美术教师",
+    "salary_min": null,
+    "salary_max": null,
+    "salary_unit": null,
+    "salary_raw_text": "未注明",
+    "education_requirement": null,
+    "major_requirement": null,
+    "teacher_certificate_requirement": null,
+    "mandarin_requirement": null,
+    "experience_requirement": null,
+    "age_requirement": null,
+    "hukou_requirement": null,
+    "english_required": null,
+    "english_requirement": null,
+    "international_curriculum_requirement": null,
+    "published_date": null,
+    "deadline": null,
+    "first_seen_date": "2026-09-10",
+    "last_verified_date": "2026-09-10",
+    "job_status": "lead",
+    "source_level": "C",
+    "source_name": "智联招聘公开索引",
+    "source_url": "https://www.zhaopin.com/jobdetail/CC822051650J40917294903.htm",
+    "official_url": null,
+    "other_sources": [],
+    "page_title": "峰合画室美术教师（可接受外派）",
+    "match_score": 75,
+    "match_level": "较高匹配",
+    "match_reasons": [
+      "美术教学方向与候选人技能相关"
+    ],
+    "risk_flags": [
+      "公开索引已发现，但发布时间和当前投递状态未确认"
+    ],
+    "hard_blockers": [],
+    "recommendation_score": 25,
+    "recommendation_level": "C",
+    "recommendation_label": "🔎 新发现招聘线索",
+    "recommendation_reason": "等待公开详情页或人工浏览器进一步核实。",
+    "information_confidence": "低",
+    "is_new_72h": false,
+    "deadline_urgency": "未注明",
+    "user_favorite": false,
+    "application_status": "未收藏",
+    "user_notes": "",
+    "created_at": "2026-09-10",
+    "updated_at": "2026-09-10",
+    "scoring_version": "2026-09-cloud-v2"
   }
 ]

@@ -7,4 +7,5 @@ localStorage.setItem('jobstate:legacy-id',JSON.stringify({application_status:'�
 RadarStore.saveJobState('stable-id',{favorite:true});assert.equal(RadarStore.getJobState('stable-id').favorite,true,'job state persists by stable id');
 const job={job_title:'漫画教师',job_category:'美术教师',match_reasons:['漫画'],hard_blockers:[],job_status:'verify',match_score:80,city:'哈尔滨',school_type:'民办学校',salary_min:9000,english_required:false};
 const steady=RadarRecommendation.score(job,defaults),changed=RadarRecommendation.score(job,{...defaults,cityPriority:{哈尔滨:1,北京:6,'东北其他':1},minSalary:15000,topPriority:'salary'});assert.notEqual(steady,changed,'recommendation changes with preferences');assert.equal(job.match_score,80,'objective match score is unchanged');
+assert.equal(RadarRecommendation.score({...job,job_status:'lead'},defaults),25,'unverified lead cannot become a high recommendation');
 console.log('OK: storage persistence, legacy migration, and preference scoring tests passed.');

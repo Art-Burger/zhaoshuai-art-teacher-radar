@@ -1,0 +1,134 @@
+[
+  {
+    "id": "recruit-01",
+    "source_name": "BOSS直聘",
+    "source_type": "招聘平台",
+    "url": "https://www.zhipin.com/",
+    "automation_level": "C",
+    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_success": true,
+    "jobs_discovered": 0,
+    "manual_required": true
+  },
+  {
+    "id": "recruit-02",
+    "source_name": "智联招聘",
+    "source_type": "招聘平台",
+    "url": "https://www.zhaopin.com/",
+    "automation_level": "C",
+    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_success": true,
+    "jobs_discovered": 0,
+    "manual_required": true
+  },
+  {
+    "id": "recruit-03",
+    "source_name": "猎聘",
+    "source_type": "招聘平台",
+    "url": "https://www.liepin.com/",
+    "automation_level": "C",
+    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_success": true,
+    "jobs_discovered": 0,
+    "manual_required": true
+  },
+  {
+    "id": "recruit-04",
+    "source_name": "万行教师人才网",
+    "source_type": "教师招聘",
+    "url": "https://www.job10000.com/",
+    "automation_level": "C",
+    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_success": true,
+    "jobs_discovered": 0,
+    "manual_required": true
+  },
+  {
+    "id": "recruit-05",
+    "source_name": "高校人才网",
+    "source_type": "教师招聘/聚合",
+    "url": "https://www.gaoxiaojob.com/",
+    "automation_level": "B",
+    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_success": true,
+    "jobs_discovered": 0,
+    "manual_required": false
+  },
+  {
+    "id": "recruit-06",
+    "source_name": "教师招聘网 job910",
+    "source_type": "教师招聘/聚合",
+    "url": "https://www.job910.com/",
+    "automation_level": "B",
+    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_success": true,
+    "jobs_discovered": 0,
+    "manual_required": false
+  },
+  {
+    "id": "recruit-07",
+    "source_name": "粉笔资讯",
+    "source_type": "事业单位聚合",
+    "url": "https://www.fenbi.com/",
+    "automation_level": "B",
+    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_success": true,
+    "jobs_discovered": 0,
+    "manual_required": false
+  },
+  {
+    "id": "recruit-08",
+    "source_name": "全国事业单位招聘网",
+    "source_type": "事业单位聚合",
+    "url": "https://qgsydw.com/",
+    "automation_level": "B",
+    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_success": false,
+    "jobs_discovered": 0,
+    "manual_required": false
+  },
+  {
+    "id": "recruit-09",
+    "source_name": "Nord Anglia Careers",
+    "source_type": "国际学校招聘",
+    "url": "https://careers.nordangliaeducation.com/",
+    "automation_level": "B",
+    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_success": true,
+    "jobs_discovered": 0,
+    "manual_required": false
+  },
+  {
+    "id": "recruit-10",
+    "source_name": "eChinaCareers",
+    "source_type": "国际招聘平台",
+    "url": "https://echinacareers.com/",
+    "automation_level": "B",
+    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_success": true,
+    "jobs_discovered": 0,
+    "manual_required": false
+  },
+  {
+    "id": "recruit-11",
+    "source_name": "高校就业信息网集合",
+    "source_type": "高校就业",
+    "url": "https://www.ncss.cn/",
+    "automation_level": "B",
+    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_success": true,
+    "jobs_discovered": 0,
+    "manual_required": false
+  },
+  {
+    "id": "recruit-12",
+    "source_name": "Bing News RSS",
+    "source_type": "公开搜索",
+    "url": "https://www.bing.com/news/search",
+    "automation_level": "B",
+    "last_checked": "2026-09-10T08:31:16+08:00",
+    "last_success": true,
+    "jobs_discovered": 0,
+    "manual_required": false
+  }
+]
