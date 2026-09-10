@@ -38,11 +38,12 @@ def queries_for(day,school_names):
  rotation={0:['哈尔滨 小学美术教师 教育局 招聘','哈尔滨 初中美术教师 人社局'],1:['北京 Visual Arts Teacher 2026-2027','北京 民办学校 美术教师 秋季招聘'],2:['沈阳 美术教师 最新招聘','长春 艺考美术教师 最新招聘'],3:[f'{n} 美术教师 招聘 2026' for n in school_names[:4]],4:['大连 高中美术教师 最新招聘','东北 艺术高中 美术教师 招聘'],5:['漫画教师 插画教师 数字绘画教师 东北 招聘','艺考美术教师 哈尔滨 沈阳 长春 招聘'],6:['美术教师 2026年9月 教育局 人社局 东北','Art Teacher Beijing Harbin latest']};return base+rotation[day]
 jobs=load('jobs.json');logs=load('search-log.json');official=load('official-sources.json');recruit=load('recruitment-sources.json');harbin=load('harbin-schools.json');others=load('city-schools.json');system_status=load('system-status.json');coverage_data=[];fail=[];urls=set();new_sources=0;new_leads=0;verified=0;expired=0;reverified=0;known_checked=0;schools_checked=0
 try:
- cities=['哈尔滨']+{0:['哈尔滨'],1:['北京'],2:['沈阳','长春'],3:['哈尔滨'],4:['大连'],5:['哈尔滨','沈阳','长春'],6:['哈尔滨','北京','沈阳','大连','长春']}[now.weekday()]
+ cities=list(dict.fromkeys(['哈尔滨']+{0:['哈尔滨'],1:['北京'],2:['沈阳','长春'],3:['哈尔滨'],4:['大连'],5:['哈尔滨','沈阳','长春'],6:['哈尔滨','北京','沈阳','大连','长春']}[now.weekday()]))
  for src in official:
   if src['city'] not in cities:continue
+  known_checked+=1;urls.add(src['url'])
   try:
-   page=fetch(src['url']);found=links(src['url'],page);src.update(last_checked=now.isoformat(timespec='seconds'),last_success=True,jobs_discovered=len(found));known_checked+=1;urls.add(src['url'])
+   page=fetch(src['url']);found=links(src['url'],page);src.update(last_checked=now.isoformat(timespec='seconds'),last_success=True,jobs_discovered=len(found))
    for url,title in found:
     urls.add(url);item=lead(url,title,src['source_name'],'A')
     if not any(j['id']==item['id'] for j in jobs):jobs.append(item);new_leads+=1
@@ -50,6 +51,7 @@ try:
  school_pool=harbin if now.weekday() in (0,3,5,6) else [s for s in others if s['city'] in cities]
  qs=queries_for(now.weekday(),[s['school_name'] for s in school_pool]);schools_checked=min(4,len(school_pool))
  for q in qs:
+  urls.add('https://www.bing.com/news/search?'+urllib.parse.urlencode({'q':q,'format':'rss','setlang':'zh-cn'}))
   try:
    for url,title in rss(q):
     urls.add(url);item=lead(url,title,'公开搜索/RSS','C')
