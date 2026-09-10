@@ -21,6 +21,23 @@ def fetch(url,timeout=20):
 def textify(s): return re.sub(r'\s+',' ',unescape(re.sub(r'<[^>]+>',' ',s))).strip()
 def city_for(s): return next((c for c in CITIES if c in s),None)
 def stable_id(url,title): return 'cloud-'+hashlib.sha256((url+'|'+title).encode()).hexdigest()[:16]
+def recalculate_scores(j):
+    """Recompute objective résumé match and a preference-neutral delivery baseline."""
+    raw=' '.join(str(j.get(k) or '') for k in ('job_title','job_category','major_requirement','teacher_certificate_requirement','experience_requirement','education_stage'))+' '+' '.join(j.get('match_reasons') or [])
+    score=0
+    score+=15 if re.search(r'美术|绘画|艺术|art',raw,re.I) else 6
+    cert=j.get('teacher_certificate_requirement'); score+=15 if cert and re.search(r'教师资格',str(cert)) else 9
+    score+=18 if re.search(r'小学|初中|K12|教学|教师',raw,re.I) else 10
+    score+=15 if re.search(r'素描|色彩|速写|漫画|插画|数字|绘画',raw,re.I) else 8
+    score+=8 if re.search(r'经验|教学',raw,re.I) else 5
+    score+=10 if j.get('city')=='哈尔滨' else 9 if j.get('city')=='北京' else 8 if j.get('city') in ('沈阳','大连','长春') else 5
+    score+=8 if j.get('salary_min') is not None else 4
+    score+=5 if re.search(r'漫画|插画|Photoshop|Procreate|动漫|数字绘画|角色设计',raw,re.I) else 0
+    j['match_score']=min(100,score); j['match_level']='高匹配' if score>=80 else '较高匹配' if score>=70 else '中等匹配' if score>=55 else '低匹配'
+    if j.get('hard_blockers') or j.get('job_status') in ('expired','dead'): rec=0
+    else:
+        trust={'A':10,'B':7,'C':3}.get(j.get('source_level'),2); freshness=8 if j.get('published_date') and j['published_date']>=today else 2; rec=round(score*.65+trust+freshness-(10 if j.get('job_status')=='verify' else 0))
+    j['recommendation_score']=max(0,min(100,rec)); level='S' if rec>=80 else 'A' if rec>=65 else 'B' if rec>=45 else 'C' if rec>0 else 'X'; labels={'S':'🔥 S 建议优先投','A':'🟢 A 值得投','B':'🟡 B 可以考虑','C':'⚪ C 低优先级','X':'🔴 X 存在硬伤'}; j['recommendation_level']=level; j['recommendation_label']=labels[level]; j['scoring_version']='2026-09-cloud-v1'
 def candidate(url,title,source_name,level='C'):
     city=city_for(title) or '未注明'; sid=stable_id(url,title)
     return {'id':sid,'school_name':source_name,'job_title':title[:100],'province':None,'city':city,'district':None,'school_type':'未注明','education_stage':'未注明','job_category':'美术教师','salary_min':None,'salary_max':None,'salary_unit':None,'salary_raw_text':'未注明','education_requirement':None,'major_requirement':None,'teacher_certificate_requirement':None,'mandarin_requirement':None,'experience_requirement':None,'age_requirement':None,'hukou_requirement':None,'english_required':None,'english_requirement':None,'international_curriculum_requirement':None,'published_date':None,'deadline':None,'first_seen_date':today,'last_verified_date':today,'job_status':'verify','source_level':level,'source_name':source_name,'source_url':url,'official_url':url if level=='A' else None,'other_sources':[],'page_title':title[:160],'match_score':55,'match_level':'待详细分析','match_reasons':['岗位方向与美术教学相关'], 'risk_flags':['自动发现线索；招聘要求与时效待深度核实'],'hard_blockers':[],'recommendation_score':35,'recommendation_level':'C','recommendation_label':'⚪ C 低优先级','recommendation_reason':'云端新发现，待核实后再决定是否投递。','is_new_72h':False,'deadline_urgency':'未注明','user_favorite':False,'application_status':'未收藏','user_notes':'','created_at':today,'updated_at':today}
@@ -57,6 +74,7 @@ try:
         if j.get('job_status') in ('open','verify') and j.get('source_level')=='A':
             try: fetch(j['source_url']); j['last_verified_date']=today
             except Exception as exc: failures.append({'site':j['source_name'],'url':j['source_url'],'failed_at':now.isoformat(timespec='seconds'),'reason':f'{type(exc).__name__}: {str(exc)[:180]}','retry':True})
+        recalculate_scores(j)
     # Stable-key dedupe. Existing records win; no automatic destructive merge.
     seen=set(); unique=[]
     for j in jobs:
