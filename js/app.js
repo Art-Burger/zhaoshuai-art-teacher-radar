@@ -89,8 +89,10 @@ let jobs = [],
   schools = [],
   coverage = [],
   radarCoverage = [],
+  searchLogs = [],
   systemStatus = {},
   filtered = [],
+  quickFilter = "",
   preferences = RadarStore.getPreferences(DEFAULTS);
 const labels = {
   open: "🟢 当前可投",
@@ -131,7 +133,8 @@ function card(raw, compact = false) {
   const j = scored(raw),
     s = state(j.id),
     hard = j.hard_blockers?.length;
-  return `<article class="card"><div class="badges"><span class="badge ${j.display_level.toLowerCase()}">${j.display_label} · ${j.preference_score}</span><span class="badge">履历匹配 ${j.match_score}%</span><span class="badge">信息可信度：${j.information_confidence || "低"}</span><span class="badge">${labels[j.job_status]}</span><span class="badge">${j.source_badge || { A: "🛡️ 官方", B: "✓ 招聘平台", C: "⚠️ 第三方线索" }[j.source_level]}</span></div><h3>${j.school_name}</h3><b>${j.job_title}</b><div class="meta">📍 ${j.city} · ${fmt(j.district)}　🏫 ${j.school_type}　🎓 ${j.education_stage}</div><div>💰 ${fmt(j.salary_raw_text)}　📅 ${fmt(j.published_date)}　⏳ ${fmt(j.deadline)}</div><div class="why">${j.recommendation_reason}</div>${hard ? `<div class="risk">🔴 硬性资格风险：${j.hard_blockers.join("；")}</div>` : ""}${j.risk_flags?.length ? `<div class="muted">⚠️ ${j.risk_flags.join("；")}</div>` : ""}${compact ? "" : `<div>${j.match_reasons.map((x) => "✓ " + x).join("　")}</div><select data-status="${j.id}">${["未收藏", "收藏", "准备投递", "已投递", "已联系", "面试", "等待结果", "Offer", "拒绝", "主动放弃"].map((x) => `<option ${s.application_status === x ? "selected" : ""}>${x}</option>`).join("")}</select><input type="date" data-date="${j.id}" value="${s.activity_date || ""}" aria-label="投递或联系日期"><textarea data-notes="${j.id}" placeholder="本地备注">${s.user_notes || ""}</textarea>`}<div class="actions"><a class="primary" target="_blank" rel="noopener" href="${j.source_url}">查看原招聘</a>${j.official_url ? `<a target="_blank" rel="noopener" href="${j.official_url}">查看官方公告</a>` : ""}<button data-fav="${j.id}">${s.favorite ? "❤️ 已收藏" : "♡ 收藏"}</button></div></article>`;
+  const appStatus = ["准备投递", "已投递", "已联系", "面试", "等待结果", "Offer", "拒绝", "主动放弃"].includes(s.application_status) ? s.application_status : "准备投递";
+  return `<article class="card"><div class="badges"><span class="badge ${j.display_level.toLowerCase()}">${j.display_label} · ${j.preference_score}</span><span class="badge">履历匹配 ${j.match_score}%</span><span class="badge">信息可信度：${j.information_confidence || "低"}</span><span class="badge">${labels[j.job_status]}</span><span class="badge">${j.source_badge || { A: "🛡️ 官方", B: "✓ 招聘平台", C: "⚠️ 第三方线索" }[j.source_level]}</span></div><h3>${j.school_name}</h3><b>${j.job_title}</b><div class="meta">📍 ${j.city} · ${fmt(j.district)}　🏫 ${j.school_type}　🎓 ${j.education_stage}</div><div>💰 ${fmt(j.salary_raw_text)}　📅 ${fmt(j.published_date)}　⏳ ${fmt(j.deadline)}</div><div class="why">${j.recommendation_reason}</div>${hard ? `<div class="risk">🔴 硬性资格风险：${j.hard_blockers.join("；")}</div>` : ""}${j.risk_flags?.length ? `<div class="muted">⚠️ ${j.risk_flags.join("；")}</div>` : ""}${compact ? "" : `<div>${j.match_reasons.map((x) => "✓ " + x).join("　")}</div><div class="job-controls"><button data-fav="${j.id}">${s.favorite ? "❤️ 已收藏" : "♡ 收藏"}</button><details class="status-menu"><summary>📝 ${appStatus}</summary><div>${["准备投递", "已投递", "已联系", "面试", "等待结果", "Offer", "拒绝", "主动放弃"].map((x) => `<button data-app-state="${j.id}" data-value="${x}">${x}</button>`).join("")}</div></details></div><input type="date" data-date="${j.id}" value="${s.activity_date || ""}" aria-label="投递或联系日期"><textarea data-notes="${j.id}" placeholder="本地备注">${s.user_notes || ""}</textarea>`}<div class="actions"><a class="primary" target="_blank" rel="noopener" href="${j.source_url}">查看原招聘</a>${j.official_url ? `<a target="_blank" rel="noopener" href="${j.official_url}">查看官方公告</a>` : ""}${compact ? `<button data-fav="${j.id}">${s.favorite ? "❤️ 已收藏" : "♡ 收藏"}</button>` : ""}</div></article>`;
 }
 function bindCards() {
   document.querySelectorAll("[data-fav]").forEach(
@@ -141,13 +144,10 @@ function bindCards() {
         render();
       }),
   );
-  document
-    .querySelectorAll("[data-status]")
-    .forEach(
-      (e) =>
-        (e.onchange = () =>
-          save(e.dataset.status, { application_status: e.value })),
-    );
+  document.querySelectorAll("[data-app-state]").forEach((b) => (b.onclick = () => {
+    save(b.dataset.appState, { application_status: b.dataset.value });
+    render();
+  }));
   document
     .querySelectorAll("[data-date]")
     .forEach(
@@ -198,6 +198,8 @@ function render() {
         !$("#blocker").value ||
         ($("#blocker").value === "yes") === !!j.hard_blockers.length,
     );
+  if (quickFilter === "recent") filtered = filtered.filter((j) => days(j.first_seen_date) >= -2 && days(j.first_seen_date) <= 1);
+  if (quickFilter === "urgent") filtered = filtered.filter((j) => j.job_status === "open" && days(j.deadline) >= 0 && days(j.deadline) <= 7);
   const key = $("#sort").value;
   filtered.sort((a, b) =>
     key === "recommendation_score"
@@ -220,22 +222,17 @@ function renderHighlights() {
     top = open
       .filter((j) => !j.hard_blockers.length)
       .sort((a, b) => scored(b).preference_score - scored(a).preference_score)
-      .slice(0, 5),
-    urgent = open.filter((j) => days(j.deadline) <= 7 && days(j.deadline) >= 0);
+    .filter((j) => (j.information_confidence || "低") !== "低")
+    .slice(0, 5);
   $("#top").innerHTML =
-    top.map((j) => card(j, true)).join("") ||
+    top.map((j) => card(j)).join("") ||
     '<p class="empty">目前没有达到“当前可投”证据门槛的优先岗位。</p>';
-  $("#urgent").innerHTML =
-    urgent.map((j) => card(j, true)).join("") ||
-    '<p class="empty">暂无 7 天内截止的当前可投岗位。</p>';
-  $("#new").innerHTML =
-    jobs
-      .filter(
-        (j) => days(j.first_seen_date) >= -2 && days(j.first_seen_date) <= 1,
-      )
-      .slice(0, 3)
-      .map((j) => card(j, true))
-      .join("") || '<p class="empty">最近 72 小时没有新发现。</p>';
+}
+
+function zhTime(value) {
+  if (!value) return "尚未更新";
+  const date = new Date(value);
+  return new Intl.DateTimeFormat("zh-CN", { timeZone: "Asia/Shanghai", hour: "2-digit", minute: "2-digit", hour12: false }).format(date);
 }
 function checkbox(path, key, label) {
   const checked = preferences[path][key] ? "checked" : "";
@@ -336,13 +333,14 @@ function fill(id, key) {
   );
 }
 async function init() {
-  [jobs, schools, coverage, systemStatus, radarCoverage] = await Promise.all(
+  [jobs, schools, coverage, systemStatus, radarCoverage, searchLogs] = await Promise.all(
     [
       "jobs.json",
       "schools.json",
       "source-coverage.json",
       "system-status.json",
       "radar-coverage.json",
+      "search-log.json",
     ].map((f) =>
       fetch("data/" + f + "?v=" + Date.now()).then((r) => {
         if (!r.ok) throw Error(f + " " + r.status);
@@ -359,23 +357,7 @@ async function init() {
       (j) => days(j.first_seen_date) >= -2 && days(j.first_seen_date) <= 1,
     ),
     urgent = open.filter((j) => days(j.deadline) <= 7 && days(j.deadline) >= 0);
-  $("#dates").innerHTML =
-    `今日：${TODAY}<br>首次建立：${systemStatus.first_build_date || BUILD_DATE}<br>数据更新：${systemStatus.last_data_update || BUILD_DATE}`;
-  $("#data-health").innerHTML =
-    `<div><strong>${systemStatus.status_label}</strong><div class="muted">最后自动更新：${fmt(systemStatus.last_automatic_update)}</div></div><div class="schedule">🔄 数据每天北京时间 09:00 自动更新<br><span class="muted">下一次：${fmt(systemStatus.next_scheduled_update)}<br>手动更新需仓库维护者在 GitHub Actions 运行工作流，不暴露 Token。</span></div>`;
-  $("#stats").innerHTML = [
-    ["当前可投", open.length],
-    ["待核实", verify.length],
-    ["招聘线索", leads.length],
-    ["72h发布", published.length],
-    ["72h发现", seen.length],
-    ["7天内截止", urgent.length],
-  ]
-    .map(
-      (x) =>
-        `<div class="stat"><strong>${x[1]}</strong><span>${x[0]}</span></div>`,
-    )
-    .join("");
+  $("#dates").textContent = `🟢 今天 ${zhTime(systemStatus.last_automatic_update)} 已更新 · ${open.length} 当前可投 · ${verify.length} 待核实 · ${leads.length} 招聘线索`;
   $("#radar-coverage").innerHTML = radarCoverage.map((r) => `<div class="stat"><strong>${r.city}</strong><span>学校 ${r.schools_monitored} · 官方源 ${r.official_sources}<br>Discovery Query ${r.discovery_queries || r.queries_last_7d || 0} · URL ${r.urls_examined || 0}<br>线索 ${r.job_leads} · 待核实 ${r.high_confidence_pending} · 可投 ${r.verified_open}<br>失败 ${r.failed_sources || 0} · ${fmt(r.last_searched_at)}</span></div>`).join("");
   const groups = ["哈尔滨", "北京", "沈阳", "大连", "长春", "东北其他"];
   $("#cities").innerHTML = groups
@@ -393,6 +375,9 @@ async function init() {
     .querySelectorAll(".filters select")
     .forEach((x) => (x.onchange = render));
   $("#reset").onclick = () => {
+    quickFilter = "";
+    $("#quick-note").textContent = "";
+    document.querySelectorAll("[data-city]").forEach((b) => b.classList.remove("active"));
     document
       .querySelectorAll(".filters select")
       .forEach((x) => (x.selectedIndex = 0));
@@ -401,11 +386,23 @@ async function init() {
   document.querySelectorAll("[data-city]").forEach(
     (b) =>
       (b.onclick = () => {
+        quickFilter = "";
+        document.querySelectorAll("[data-city]").forEach((x) => x.classList.toggle("active", x === b));
         $("#city").value = b.dataset.city === "东北其他" ? "" : b.dataset.city;
         render();
-        $("#jobs").scrollIntoView({ behavior: "smooth" });
+        $("#all-jobs").scrollIntoView({ behavior: "smooth" });
       }),
   );
+  const applyQuickFilter = (mode, note) => {
+    document.querySelectorAll(".filters select").forEach((x) => (x.selectedIndex = 0));
+    document.querySelectorAll("[data-city]").forEach((b) => b.classList.remove("active"));
+    quickFilter = mode;
+    $("#quick-note").textContent = note;
+    render();
+    $("#all-jobs").scrollIntoView({ behavior: "smooth" });
+  };
+  $("#recent-filter").onclick = () => applyQuickFilter("recent", "已筛选：最近72小时发现");
+  $("#urgent-filter").onclick = () => applyQuickFilter("urgent", "已筛选：7天内截止且当前可投");
   $("#coverage-list").innerHTML = coverage
     .map(
       (s) =>
@@ -418,6 +415,7 @@ async function init() {
         `<div class="school"><b>${s.school_name}</b><span>${s.city} · ${s.school_type}</span><span>近一年 ${s.recruitment_count_12m} 次</span><span>${s.currently_hiring ? "当前招聘" : "暂无当前招聘"}</span></div>`,
     )
     .join("");
+  $("#search-log").innerHTML = searchLogs.slice(-5).reverse().map((x) => `<div class="log-item"><b>${x.run_type || "搜索运行"}</b><span>${zhTime(x.timestamp)} · 学校 ${x.schools_actually_checked ?? x.schools_checked ?? 0} · Source ${x.sources_actually_fetched ?? x.known_sources_checked ?? 0} · Query ${x.queries_actually_sent ?? x.discovery_queries_executed ?? 0} · URL ${x.result_urls_examined ?? x.urls_examined ?? 0} · 失败 ${(x.failed_sources || []).length}</span></div>`).join("");
   renderPreferences();
   bindPreferences();
   render();
