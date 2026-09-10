@@ -1,7 +1,7 @@
 {
   "first_build_date": "2026-09-09",
-  "last_data_update": "2026-09-10T08:03:47+08:00",
-  "last_automatic_update": "2026-09-10T08:03:47+08:00",
+  "last_data_update": "2026-09-10T08:42:34+08:00",
+  "last_automatic_update": "2026-09-10T08:42:34+08:00",
   "next_scheduled_update": "2026-09-10T09:00:00+08:00",
   "update_status": "partial",
   "status_label": "🟡 部分来源暂不可自动核实",
@@ -11,5 +11,5 @@
   "workflow_name": "Daily Job Radar Update",
   "last_run_id": null,
   "last_run_url": null,
-  "last_error": null
+  "last_error": "URLError: <urlopen error [Errno 101] Network is unreachable>; URLError: <urlopen error [Errno 111] Connection refused>; URLError: <urlopen error [Errno 111] Connection refused>"
 }

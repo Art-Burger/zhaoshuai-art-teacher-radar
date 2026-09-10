@@ -57,7 +57,7 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1",
+    "scoring_version": "2026-09-cloud-v2",
     "information_confidence": "低"
   },
   {
@@ -119,8 +119,8 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1",
-    "information_confidence": "低"
+    "scoring_version": "2026-09-cloud-v2",
+    "information_confidence": "中"
   },
   {
     "id": "beijing-international-art-echinacareers-26708",
@@ -181,7 +181,7 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1",
+    "scoring_version": "2026-09-cloud-v2",
     "information_confidence": "低"
   },
   {
@@ -243,7 +243,7 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1",
+    "scoring_version": "2026-09-cloud-v2",
     "information_confidence": "低"
   },
   {
@@ -306,7 +306,7 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1",
+    "scoring_version": "2026-09-cloud-v2",
     "information_confidence": "低"
   },
   {
@@ -365,7 +365,7 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1",
+    "scoring_version": "2026-09-cloud-v2",
     "information_confidence": "高"
   },
   {
@@ -427,8 +427,8 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1",
-    "information_confidence": "高"
+    "scoring_version": "2026-09-cloud-v2",
+    "information_confidence": "低"
   },
   {
     "id": "harbin-qiushi-junior-art-2026-07",
@@ -487,8 +487,8 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1",
-    "information_confidence": "高"
+    "scoring_version": "2026-09-cloud-v2",
+    "information_confidence": "低"
   },
   {
     "id": "shenyang-art-preschool-normal-2026",
@@ -547,7 +547,7 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1",
+    "scoring_version": "2026-09-cloud-v2",
     "information_confidence": "低"
   },
   {
@@ -608,7 +608,7 @@
     "user_notes": "",
     "created_at": "2026-09-09",
     "updated_at": "2026-09-09",
-    "scoring_version": "2026-09-cloud-v1",
+    "scoring_version": "2026-09-cloud-v2",
     "information_confidence": "高"
   },
   {
@@ -646,7 +646,7 @@
     "official_url": null,
     "other_sources": [],
     "page_title": "高中美术教师",
-    "match_score": 75,
+    "match_score": 72,
     "match_level": "较高匹配",
     "match_reasons": [
       "美术教学方向与候选人技能相关"
@@ -704,7 +704,7 @@
     "official_url": null,
     "other_sources": [],
     "page_title": "峰合画室美术教师（可接受外派）",
-    "match_score": 75,
+    "match_score": 70,
     "match_level": "较高匹配",
     "match_reasons": [
       "美术教学方向与候选人技能相关"

@@ -470,5 +470,85 @@
       }
     ],
     "notes": "96 school reverse searches plus official/recruitment registry checks. Public-index leads remain leads."
+  },
+  {
+    "run_id": "cloud-20260910T084234+0800",
+    "timestamp": "2026-09-10T08:42:34+08:00",
+    "run_type": "cloud_daily_radar",
+    "city": [
+      "哈尔滨",
+      "哈尔滨"
+    ],
+    "known_sources_checked": 1,
+    "schools_checked": 4,
+    "discovery_queries_executed": 6,
+    "queries_executed": [
+      "哈尔滨 美术教师 最新招聘 2026",
+      "哈尔滨 艺术教师 学校招聘 2026年9月",
+      "哈尔滨市继红小学校 美术教师 招聘 2026",
+      "哈尔滨市花园小学校 美术教师 招聘 2026",
+      "哈尔滨市师范附属小学校 美术教师 招聘 2026",
+      "哈尔滨市铁岭小学校 美术教师 招聘 2026"
+    ],
+    "urls_examined": 1,
+    "new_sources_found": 0,
+    "new_job_leads": 0,
+    "new_verified_jobs": 0,
+    "jobs_reverified": 0,
+    "jobs_expired": 0,
+    "duplicates_merged": 0,
+    "failed_sources": [
+      {
+        "source_name": "哈尔滨市政府信息",
+        "url": "https://www.harbin.gov.cn/",
+        "reason": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+      },
+      {
+        "source_name": "哈尔滨市政务服务网",
+        "url": "https://zwfw.harbin.gov.cn/",
+        "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+      },
+      {
+        "source_name": "南岗区教育局政务入口",
+        "url": "https://zwfw.harbin.gov.cn/hz_root/bstype/grall?vmcityout=ngq",
+        "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+      },
+      {
+        "source_name": "道里区政府",
+        "url": "https://www.hrbdl.gov.cn/",
+        "reason": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+      },
+      {
+        "source_name": "道外区政府",
+        "url": "https://www.hrbdw.gov.cn/",
+        "reason": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+      },
+      {
+        "source_name": "香坊区政务服务网",
+        "url": "https://zwfw.harbin.gov.cn/hz_root/map/minglu?vmcityout=xfq",
+        "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+      },
+      {
+        "source_name": "松北区政府/哈尔滨新区",
+        "url": "https://www.songbei.gov.cn/",
+        "reason": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+      },
+      {
+        "source_name": "平房区政府",
+        "url": "https://www.hrbpf.gov.cn/",
+        "reason": "URLError: <urlopen error [Errno 101] Network is unreachable>"
+      },
+      {
+        "source_name": "呼兰区政务服务网",
+        "url": "https://zwfw.harbin.gov.cn/hz_root/oneQY/bsbqr?vmcityout=hlq",
+        "reason": "URLError: <urlopen error [Errno 111] Connection refused>"
+      },
+      {
+        "source_name": "黑龙江省事业单位公开招聘平台",
+        "url": "https://hlj.zhaopin.com/",
+        "reason": "HTTPError: HTTP Error 403: Forbidden"
+      }
+    ],
+    "notes": "Additive-first V2 rotation; public leads remain leads until verified."
   }
 ]
