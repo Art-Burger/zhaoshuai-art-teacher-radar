@@ -6,7 +6,7 @@
     "district": null,
     "source_type": "教育局",
     "url": "https://rencaizhaopin.hrbeduy.com/",
-    "last_checked": "2026-09-11T09:08:04+08:00",
+    "last_checked": "2026-09-12T09:07:20+08:00",
     "last_success": true,
     "jobs_discovered": 0,
     "automation_level": "A"
@@ -18,7 +18,7 @@
     "district": null,
     "source_type": "政府",
     "url": "https://www.harbin.gov.cn/",
-    "last_checked": "2026-09-11T09:08:04+08:00",
+    "last_checked": "2026-09-12T09:07:20+08:00",
     "last_success": false,
     "jobs_discovered": 0,
     "automation_level": "A"
@@ -30,7 +30,7 @@
     "district": null,
     "source_type": "政府/区级入口",
     "url": "https://zwfw.harbin.gov.cn/",
-    "last_checked": "2026-09-11T09:08:04+08:00",
+    "last_checked": "2026-09-12T09:07:20+08:00",
     "last_success": false,
     "jobs_discovered": 0,
     "automation_level": "A"
@@ -42,7 +42,7 @@
     "district": "南岗区",
     "source_type": "区教育局",
     "url": "https://zwfw.harbin.gov.cn/hz_root/bstype/grall?vmcityout=ngq",
-    "last_checked": "2026-09-11T09:08:04+08:00",
+    "last_checked": "2026-09-12T09:07:20+08:00",
     "last_success": false,
     "jobs_discovered": 0,
     "automation_level": "A"
@@ -54,7 +54,7 @@
     "district": "道里区",
     "source_type": "区政府",
     "url": "https://www.hrbdl.gov.cn/",
-    "last_checked": "2026-09-11T09:08:04+08:00",
+    "last_checked": "2026-09-12T09:07:20+08:00",
     "last_success": false,
     "jobs_discovered": 0,
     "automation_level": "A"
@@ -66,7 +66,7 @@
     "district": "道外区",
     "source_type": "区政府",
     "url": "https://www.hrbdw.gov.cn/",
-    "last_checked": "2026-09-11T09:08:04+08:00",
+    "last_checked": "2026-09-12T09:07:20+08:00",
     "last_success": false,
     "jobs_discovered": 0,
     "automation_level": "A"
@@ -78,7 +78,7 @@
     "district": "香坊区",
     "source_type": "区教育/人社",
     "url": "https://zwfw.harbin.gov.cn/hz_root/map/minglu?vmcityout=xfq",
-    "last_checked": "2026-09-11T09:08:04+08:00",
+    "last_checked": "2026-09-12T09:07:20+08:00",
     "last_success": false,
     "jobs_discovered": 0,
     "automation_level": "A"
@@ -90,7 +90,7 @@
     "district": "松北区",
     "source_type": "区政府",
     "url": "https://www.songbei.gov.cn/",
-    "last_checked": "2026-09-11T09:08:04+08:00",
+    "last_checked": "2026-09-12T09:07:20+08:00",
     "last_success": false,
     "jobs_discovered": 0,
     "automation_level": "A"
@@ -102,7 +102,7 @@
     "district": "平房区",
     "source_type": "区政府",
     "url": "https://www.hrbpf.gov.cn/",
-    "last_checked": "2026-09-11T09:08:04+08:00",
+    "last_checked": "2026-09-12T09:07:20+08:00",
     "last_success": false,
     "jobs_discovered": 0,
     "automation_level": "A"
@@ -114,7 +114,7 @@
     "district": "呼兰区",
     "source_type": "区教育/人社",
     "url": "https://zwfw.harbin.gov.cn/hz_root/oneQY/bsbqr?vmcityout=hlq",
-    "last_checked": "2026-09-11T09:08:04+08:00",
+    "last_checked": "2026-09-12T09:07:20+08:00",
     "last_success": false,
     "jobs_discovered": 0,
     "automation_level": "A"
@@ -126,7 +126,7 @@
     "district": null,
     "source_type": "省级人社",
     "url": "https://hlj.zhaopin.com/",
-    "last_checked": "2026-09-11T09:08:04+08:00",
+    "last_checked": "2026-09-12T09:07:20+08:00",
     "last_success": false,
     "jobs_discovered": 0,
     "automation_level": "B"
