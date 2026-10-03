@@ -1,8 +1,8 @@
 {
   "first_build_date": "2026-09-09",
-  "last_data_update": "2026-10-02T09:10:04+08:00",
-  "last_automatic_update": "2026-10-02T09:10:04+08:00",
-  "next_scheduled_update": "2026-10-03T09:00:00+08:00",
+  "last_data_update": "2026-10-03T09:09:09+08:00",
+  "last_automatic_update": "2026-10-03T09:09:09+08:00",
+  "next_scheduled_update": "2026-10-04T09:00:00+08:00",
   "update_status": "partial",
   "status_label": "🟡 部分来源暂不可自动核实",
   "cloud_runner": "GitHub Actions",
